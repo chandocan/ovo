@@ -1,0 +1,331 @@
+/*isso rezeta o css do navegador*/
+* {      
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;  
+   
+	
+}
+
+#site-container {
+    max-width: 100%;
+    margin: 0 auto; /* Para centralizar o conteúdo */
+}
+
+
+body{
+    margin-top: 10px;
+    min-height: 100vh;
+    margin: 0;
+    background-color: antiquewhite;
+    border: 2px solid black;
+    padding: 10px; /* adjust padding as needed */
+    width: 100%;
+}
+
+h1 {margin-left: 70px;
+
+}
+
+button{
+    background-color: rgb(235, 235, 235);
+    font-size:large;
+    border-color: black;
+    border-style: solid;
+    border-radius: 20px;
+    max-width: 300px;
+    min-width: 90px;
+    min-height: 40px;
+    cursor: pointer;
+}
+
+/* Estilo para a navegação (nav) */
+nav ul {
+
+    /* Exibição flexível para alinhar itens horizontalmente */
+    display: flex;
+    list-style-type: none; /*fez sumir as bolinhas pretas que é a estilização da lista*/
+}
+
+li a {
+    
+    
+    margin-right: 30px;
+    color: #fff;
+    font-weight: bold;
+     /* Cursor personalizado para indicar interatividade */
+     cursor: pointer;
+    
+}
+
+#cabecalho01, #cabecalho02, #cabecalho03 {
+    height: 70px; /*altura do cabeçalhos*/
+    background-color:orange
+}
+
+#Formulario{ 
+    /*margin: 80px auto 0; /*espaçamento entre as duas div na exibição da pagina*/
+    margin-left: 70px;
+    border-radius: 10px;
+    width: 330px; /* Defina a largura máxima desejada */
+    height: 200px; /*comprimento total*/
+    background-color: green;
+   
+}
+
+#menu,#principal,#lado{
+
+    color: yellow;
+    text-align: center;
+    font-size:x-large;
+   
+}
+
+#menu{
+    width: 350px;
+    height: 400px;
+    background-color: rgb(163, 165, 163);
+    float: left; /*flutuar a esquerda*/
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-top: 10px;
+}
+
+#principal{
+    
+    width:500px;
+    height: 400px; 
+    background-color: rgb(97, 95, 93);
+    float: left;
+    border-radius: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#lado{
+    width: 350px;
+    height: 400px;
+    background-color: rgb(163, 165, 163);
+    float: left;
+    border-radius: 30px;
+    margin-top: 10px;
+}
+
+#rodape{
+    height: 200px;
+    background-color: rgb(146, 138, 138);
+    clear: both; /*retira a flutuação da div*/
+    border-radius: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+}
+
+/*retirando a flutuação da div cabeçalho 03 é colocando bordas aredondadas*/
+#cabecalho03{
+    clear: both; /*retira a flutuação da div*/
+    border-radius: 30px;
+    width: 95%;
+    margin: 0 auto; /*div com 0 zero em cima em em baixo é automatico nas laterais*/
+    text-align: center;
+}
+
+#cabecalho01{
+    border-radius: 30px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+    
+}
+
+/*esta sem problema ate aqui*/
+#cabecalho02{
+    border-radius: 30px;
+    text-align: center;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#instagram {
+   position: absolute;
+   right: 90px;
+}
+
+#zapp {
+    position: absolute;
+    right: 160px;
+}
+
+#meuFone {
+    position: absolute;
+    right: 120px;
+    top: 1300px;
+}
+
+/*essa parte do código foi para colocar os icones do footer em colunas um ao lado do outro*/
+.coluna {
+    display: flex; /* Use flex para alinhar os elementos na horizontal */
+    justify-content: space-between; /* Espaço entre os elementos internos */
+    align-items: center; /* Centralize verticalmente */
+}
+
+.logo {
+    position: absolute;
+    top: 10px; /* Ajuste a distância do topo conforme necessário */
+    right: 10px; /* Ajuste a distância da direita conforme necessário */
+}
+
+#TextoConvite {
+    font-size:xx-large;
+    color: orangered;
+    margin-left: 20px;
+    width: 730px;
+
+}
+
+/*tem o erro aqui no posicionamento da imagem*/
+.imgNegocio01{
+    width:310px;/*diminuindo o tamanho da div com essa largura aqui*/
+    position: relative;
+    /*left: 270px;*/
+    left:450px; /*telas maiores*/
+    background-color: brown;
+
+}
+/*tem um erro para posicionar a imagem cima*/
+
+.formularioX {
+    display: inline-block;
+    width: 45%; /* Ajuste o valor conforme necessário */
+    vertical-align: top;
+}
+
+/*para tablet*/
+@media screen and (max-width:768px) {
+    body{
+        background-color: yellowgreen;
+    }
+
+    .imgNegocio01{
+        width:310px;/*diminuindo o tamanho da div com essa largura aqui*/
+        position: relative;
+        /*left: 270px;*/
+        left:200px;
+    }
+
+    #principal {
+        width: 350px;
+        height: 400;
+        margin-left: 60px;
+    }
+    
+    #lado{
+        margin-left: 60px;
+    }
+
+    #TextoConvite {
+        width: 650px;
+    }
+
+}/*fim para tablete*/
+
+/*para celulares*/
+@media screen and (max-width:600px) {
+    body{
+        background-color: chocolate;
+    }
+
+   h1, .formularioX {margin-left: 30px;}
+
+   #Formulario {
+    margin-left: 30px;
+    }
+
+    #TextoConvite {
+        font-size:x-large;
+        color: yellow;
+        width: 330px;
+        margin-left: 30px;
+    }
+
+    .imgNegocio01{
+        position:relative;
+        left: 30px;
+    }
+
+    #menu{
+        margin-left: 30px;
+    }
+
+    #principal {
+        width: 350px;
+        height: 400;
+        margin-left: 30px;
+    }
+
+    #lado{
+        margin-left: 30px;
+    }
+
+    #meuFone {
+        display: none; /*ocutei esse elemento*/
+      
+    }
+
+}/*fim para celulares*/
+
+/*para telas menores esta dentro de um intervalo*/
+@media screen and (min-width: 601px) and (max-width: 1300px) {
+
+    body{
+        background-color: yellowgreen;
+    }
+
+   h1, .formularioX {margin-left: 30px;}
+
+    #Formulario {
+        margin-left: 30px;
+    }
+
+    #TextoConvite {
+        font-size:x-large;
+        color: blue;
+        width: 330px;
+        margin-left: 30px;
+    }
+
+    .imgNegocio01{
+     
+    width:310px;/*diminuindo o tamanho da div com essa largura aqui*/
+    position: relative;
+    /*left: 270px;*/
+    left:30px;     
+    }
+
+    #menu{
+        width: 300px;
+        height: 300;
+        margin-left: 20px;
+    }
+   
+    #principal {
+        width: 300px;
+        height: 300;
+        margin-left: 10px;
+    }
+
+    #lado{
+        width: 300px;
+        height: 300;
+        margin-left: 2px;
+    }
+
+    #meuFone {
+        display: none; /*ocutei esse elemento*/
+      
+    }
+}

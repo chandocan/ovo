@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0">
+    <title>SapoDev01TesteGit</title>
+    <!--apontando para o arquivo style.css-->
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <div id="site-container"> <!-- Adicione uma div para envolver todo o conteúdo do site -->
+        <!-- Todo o conteúdo do site aqui -->
+        <div id="cabecalho01">
+        
+            <div class="logo"><img src="image/SapoDev_02.png" alt="Logo SapoDev"></div>
+    
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#sapodev">SapoDev</a>
+                    </li>
+                    <li>
+                        <a href="#servico">serviços</a>
+                    </li>
+                    <li>
+                        <a href="#empresas">Empresa</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    
+            <h1>LOGIN</h1>
+            <!-- duas classe iguais abaixo-->
+            <div id="Formulario" class="formularioX">
+                <form>
+                    <label for="username" style="position: relative; top: 60px; left: 40px;">Conta</label>
+                    <input type="text" id="username" name="username" required style="width: 200px; position: relative; top: 60px; left: 60px;"><br>
+                   
+                    <label for="password" style="position: relative; top:100px; left: 40px">Senha</label>
+                    <input type="password" id="password" name="password" required style="width: 200px; position: relative; top: 100px; left: 60px;"><br>
+    
+                    <button type="button" onclick="validateLogin()" style="position: relative; top: 110px; left: 230px;">Entrar</button>
+                    
+                </form>
+            </div>
+            
+            <div id="TextoConvite" class="formularioX">
+                <p>Aumente os negócios com nossos produtos. Sabemos como é difícil para profissionais liberais,
+                    empreendedores individuais, pequenas e médias empresas divulgarem serviços e conquistarem novos
+                    clientes.
+                </p>
+            </div>
+            
+
+            <div class="imgNegocio01"><img src="image/grafico01Negociós01.png"></div>
+
+            
+            <!--cabecalho 02-->
+            <div id="cabecalho02">
+                
+                <h2>NOS SOMOS</h2>
+            </div>
+    
+            <!--menu de navegação-->
+            <div id="menu">
+                <h3>Simples</h3>
+                <p style="color: aliceblue;">Cadastre-se gratuitamente já visualize as oportinudades</p>
+    
+                <div class="imgNegocio02"><img src="image/cadastro02.png"></div>
+    
+                <button style="top: 69px; position: relative" type="button" onclick="printandoAlgo()">Grátis</button>
+            </div>
+    
+            <!--main-->
+            <div id="principal">
+                
+                <h4>Eficientes</h4>
+                <p style="color: aliceblue;">Invista em diversas ações de marketing para trazer as melhores
+                    oportunidades de negócios</p>
+    
+                    <div class="imgNegocio03"><img src="image/Troca.png"></div>
+    
+                <button type="button" onclick="printandoAlgo()">exemplos</button>
+            </div>
+            <!--lado-->
+            <div id="lado">
+                
+                <h5>Acessíveis</h5>
+                <p style="color: aliceblue;">você somente investe para ter acesso aos dados e oportunidades de
+                    negócios</p>
+    
+                    <div class="imgNegocio03"><img src="image/homemPc.jpeg"></div>
+                    
+                <button type="button" onclick="printandoAlgo()">aplicativos</button>
+            </div>
+    
+            <!--cabecalho 02-->
+            <div id="cabecalho03">
+            
+                <h6 style="font-size: 25px;">Procure Nesse Site</h6>
+            </div>
+            <!--Rodape-->
+            <div id="rodape">
+                
+                <section class="coluna linha">
+                    <div class="item">
+                        <h7>Sobre</h7>
+                        <p style="color:black">sapoDev<br> como funciona <br>a empresa</p>
+                        
+                    </div>
+                    <div class="item">
+                        <h8>Link do site</h8>
+                        <p style="color:black">página inicial<br> cadastro do fornecedor<br> lista de empresas<br>
+                            gerenciador</p>
+                    </div>
+                    <div class="item">
+                        <h9>Informações</h9>
+                        <p style="color:black">perguntas frequentes<br> politica de contato garantido<br> termos e
+                            condições<br> ideias</p>
+                    </div>
+                    <div class="item">
+                        <h10>Gratuito</h10>
+                        <p style="color:black">fale com nosco</p>
+                    </div>
+                </section>
+                <!--redimencionei a imagem aqui-->
+                <img src="image/instagram.png" alt="" id="instagram" width="24" height="20">
+                <img src="image/iconezapp.png" alt="telefone" id="zapp" width="24" height="20">
+                <p><a href="tel:83999767728" id="meuFone">(83)999767728</a></p>
+    
+            </div>
+    </div>
+  
+    <script>
+    function validateLogin() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        // Verifique as credenciais (isso é apenas um exemplo, você deve usar um servidor real)
+        if (username === "alfredo" && password === "123") {
+            alert("Login bem-sucedido!");
+            // Aqui você pode redirecionar o usuário para outra página
+        } else {
+            loginError.style.display = "block"; 
+            /*document.getElementById("login-error").style.display = "block";*/
+        }
+    }
+    function printandoAlgo() {
+        // Abre uma janela pop-up com o texto "Olá, você Alfredo"
+        const popupWindow = window.open('', '_blank', 'width=300,height=200');
+        popupWindow.document.write('<h1>Olá, você Alfredo</h1>');
+    }
+</script>
+    
+</body>
+</html>
